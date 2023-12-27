@@ -13,6 +13,8 @@
 
 .carousel {
     height: 100vh;
+    position: relative;
+    box-sizing: border-box;
 }
 
 .carousel-inner {
@@ -31,14 +33,15 @@
 
 .carousel-caption {
     z-index: 10;
-    background-color: rgba(255, 255, 255, 0.75);
+    background-color: rgba(255, 255, 255, 0.8);
     width: fit-content;
     margin: 0 auto;
     height: fit-content !important;
     top: 50%;
-    padding: 2em 5em;
-    border-radius: 10px 0;
+    padding: 1em 5em;
     color: black;
+    font-size: 0.9em;
+    
 }
 
 .carousel-caption h1 {
@@ -536,6 +539,10 @@ footer {
     }
     #caroussel  {
         width: 100%;
+    }
+    .carousel-caption {
+        transform: translateY(-50%);
+
     }
 }
 
