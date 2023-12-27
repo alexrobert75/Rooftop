@@ -1,0 +1,585 @@
+
+.navbar {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.navbar-brand img {
+    height: 2em;
+}
+
+.carousel {
+    height: 100vh;
+}
+
+.carousel-inner {
+    height: 100vh;
+    z-index: 1;  
+}
+
+.carousel-item {
+    height: 100%; 
+}
+
+.carousel-item img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.75);
+    width: fit-content;
+    margin: 0 auto;
+    height: fit-content !important;
+    top: 50%;
+    padding: 2em 5em;
+    border-radius: 10px 0;
+    color: black;
+}
+
+.carousel-caption h1 {
+    text-transform: uppercase;
+    font-size: 2em;
+}
+
+.btn-light {
+    border: 1px solid black;
+    font-weight: 100;
+}
+
+section {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding-top: 7em;
+    margin-top: -7em;
+    margin-bottom: 8em;
+}
+
+.spacer {
+    margin-top: 6em;
+}
+
+.rightside {
+    align-self: flex-end !important; 
+}
+
+h2 {
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-right: auto;
+    display: inline-block;
+}
+
+.subtitle {
+    color: gray;
+    font-style: italic;
+    opacity: 0.5;
+    font-weight: 200;
+    margin-left: 0.2em;
+}
+
+.centered-text {
+    text-align: center;
+    margin-top: 3em;
+    width: 50%;
+}
+
+.planzone {
+    width: 100%;
+    display: flex;
+    gap: 1em;
+}
+
+.planmap {
+    position: relative;
+    width: 60%;
+}
+
+#apartmentPlan {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#apartmentPlan.fade-image {
+    opacity: 0.5;
+}
+
+
+#descriptionBox {
+    border-radius: 5px;
+    width: 40%;
+    margin: 2em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    overflow: visible;
+    font-size: 0.9em;
+}
+
+#descriptionText {
+    width: 80%;
+    background-color: white;
+    min-height: 2em;
+    padding: 1.5em;
+    border: 1px solid lightgray;
+    transform: translateX(30%);
+}
+
+#littleTitle {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+#littleDescription {
+    color: gray;
+    font-size: 1em;
+}
+
+.square-mosaic {
+    display: flex;
+    width: 100%;
+    gap: 3em;
+    margin-top: 3em;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.square-space {
+    position: relative;
+    width: 16%;
+    padding-bottom: 16%;
+    box-sizing: border-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+}
+
+.squarecaption {
+    color: black !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.75);
+    width: 100%;
+    height: 105%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    opacity: 0;
+    transition: opacity 0.3s;
+    cursor: pointer;
+    text-align: center;
+    padding: 1em;
+}
+
+.squarecaption:hover {
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+#photostudiosquare {
+    background-image: url('./img/places-thumbnails/studio.jpg');
+}
+
+#loftsquare {
+    background-image: url('./img/places-thumbnails/salon.jpg');
+}
+
+#backstagesquare {
+    background-image: url('./img/places-thumbnails/backstage.jpg');
+}
+
+#rooftopsquare {
+    background-image: url('./img/places-thumbnails/terrasse.jpg');
+}
+
+.mainInfos {
+    width: 65%;
+    box-shadow: 5px 5px 12px 0px rgba(104,101,105,0.82);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5em;
+    border-radius: 5px;
+    margin-top: 4em;
+    text-align: center;
+}
+
+.oneInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3em;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.numberInfo {
+    font-weight: 700;
+    font-size: 1.3em;
+    color: navy;
+}
+
+.infoLabel {
+    font-size: 0.9em;
+    color: darkslategray;
+}
+
+#tvsetsquare {
+    background-image: url('./img/events-thumbnail/tvset.jpg');
+}
+
+#fashionsquare {
+    background-image: url('./img/events-thumbnail/fashionshoot.jpg');
+}
+
+#corpo1square {
+    background-image: url('./img/events-thumbnail/corpoevent.jpg');
+}
+
+#popupsquare {
+    background-image: url('./img/events-thumbnail/popupstore.jpg');
+}
+
+#corpo2square {
+    background-image: url('./img/events-thumbnail/corpooutside.jpg');
+}
+
+.logo-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 3em 0 0 0;
+}
+
+.logo-slider {
+    display: flex;
+    animation: scroll-logos 30s linear infinite;
+}
+
+.logo-slider img {
+    height: 2em;
+    margin: 1.3em;
+}
+
+@keyframes scroll-logos {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+form {
+    width: 70%;
+    margin-top: 3em;
+}
+
+input, select, textarea {
+    margin-bottom: 1em;
+}
+
+label {
+    margin-bottom: 0.2em;
+}
+
+#diapo {
+    margin-top: 6em;
+    padding: 0;
+    margin-bottom: 0;
+    box-sizing: content-box;
+    min-height: 85vh;
+
+}
+
+.frame2col {
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+    margin: 3em auto;
+}
+
+.h2diapo {
+    margin-bottom: 1em;
+}
+
+.descblock {
+    width: 50%;
+    text-align: justify;
+}
+
+footer {
+    background-color: lightgray;
+    text-align: center;
+    padding: 0.5em 0;
+    color: white;
+    font-weight: 100;
+}
+
+/* Caroussel d'images */
+
+#caroussel  {
+    width: 50%;
+    margin: 0;
+}
+
+#caroussel img {
+    width: 100%;
+}
+
+.relativeP {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    height: fit-content;
+}
+
+.mainpic {
+    width: 100%;
+    position: relative;
+}
+
+.thumbnail {
+    width: 100%;
+    display: flex;
+    gap: 0.2em;
+    margin-top: 0.2em;
+}
+
+.bigpic {
+    display: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.showimg {
+    display: flex;
+}
+
+.tpic {
+    filter: grayscale(80%);
+}
+
+.tpic:hover{
+    filter: none;
+}
+
+.clear{
+    filter:none;
+}
+
+.fleche {
+    font-style: normal !important;
+    text-decoration: none !important;
+    color: white;
+    font-size: 2rem;
+    padding: 0.5rem; 
+    position: absolute;
+    top: 30%;
+    cursor: pointer;
+    width: fit-content;
+    font-weight: bold; 
+    z-index: 10;
+    text-align: center;
+}
+
+.bigfleche {
+    font-size: 4rem;
+    top: 40%;
+    width: 4.2rem;
+    z-index: 999999999999999;
+}
+
+#prev {
+    left: 0;
+    border-radius: 0 10px 10px 0;
+}
+
+#next {
+    right: 0;
+    border-radius: 10px 0 0 10px;
+}
+
+#prev:hover,#next:hover{
+    background-color: rgba(0,0,0,0.5);
+    transition: background-color 0.3s;
+    color: white;
+}
+
+
+
+/* Image plein écran */
+
+.modal {
+    display: flex;
+    position: fixed;
+    z-index: 100000000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal .bigpic {
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.modal .bigpic img {
+    max-height: 90%;
+    max-width: 90vw;
+    animation: fade 0.3s;
+    -webkit-animation: fade 0.3s;
+    height: auto;
+    width: auto !important;
+}
+  
+.close {
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+  
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+@media (min-width: 992px) {
+    .navbar-nav {
+        flex-grow: 1;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 1200px) {
+    .centered-text {
+        width: 80%;
+    }
+    .mainInfos {
+        width: 80%;
+    }
+    .square-mosaic {
+        gap: 1.5em;
+    }
+    .square-space {
+        width: 22%;
+        padding-bottom: 22%;
+    }
+    .planmap {
+        position: relative;
+        width: 80%;
+    }
+    .planzone {
+        gap: 0;
+    }
+    #descriptionBox {
+        width: 40%;
+        font-size: 0.8em;
+        flex-wrap: wrap;
+    }
+    #descriptionText {
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+    #diapo {
+        width: 85% !important;
+    }  
+    .frame2col {
+        gap: 1.5em;
+    }
+}
+
+@media (max-width: 900px) {
+    #diapo {
+        width: 80% !important;
+    }  
+    .frame2col {
+        gap: 3em;
+        flex-direction: column;
+    }   
+    .descblock {
+        width: 100%;
+        margin-bottom: 3em;
+    }
+    #caroussel  {
+        width: 100%;
+    }
+}
+
+@media (max-width: 750px) {
+    .carousel-caption {
+        padding: 1em 2em;
+    }
+    form {
+        width: 90%;
+    }
+    
+}
+
+@media (max-width: 800px) {
+    .carousel-caption {
+        padding: 1em 2em;
+
+    }
+    #plantext {
+        margin-bottom: 0;
+    }
+    .mainInfos {
+        width: 100%;
+        font-size: 0.8em;
+    }
+    .square-mosaic {
+        gap: 1.2em;
+    }
+    .square-space {
+        width: 33%;
+        padding-bottom: 33%;
+    }
+    .logo-slider {
+        animation: scroll-logos 10s linear infinite;
+    }
+}
+
+@media (max-width: 900px) {
+    .planzone {
+        display: none;
+    }
+}
+
+
+
+
+
