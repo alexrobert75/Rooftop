@@ -49,6 +49,23 @@
     font-size: 2em;
 }
 
+/* white flash fix */
+
+.carousel-inner .carousel-item {
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: block;
+    position: absolute;
+  }
+  .carousel-inner .carousel-item:first-of-type {
+    position: relative;
+  }
+  .carousel-inner .active {
+    opacity: 1;
+  }
+
 .btn-light {
     border: 1px solid black;
     font-weight: 100;
@@ -97,12 +114,12 @@ h2 {
 .planzone {
     width: 100%;
     display: flex;
-    gap: 1em;
 }
 
 .planmap {
     position: relative;
     width: 60%;
+    margin-right: 1em;
 }
 
 #apartmentPlan {
@@ -138,6 +155,7 @@ h2 {
     padding: 1.5em;
     border: 1px solid lightgray;
     transform: translateX(30%);
+    font-size: 0.9em;
 }
 
 #littleTitle {
@@ -151,11 +169,14 @@ h2 {
     font-size: 1em;
 }
 
+#littleButton {
+    font-size: 0.9em;
+}
+
 .square-mosaic {
     display: flex;
     width: 100%;
-    gap: 3em;
-    margin-top: 3em;
+    margin-top: 2em;
     justify-content: center;
     flex-wrap: wrap;
     position: relative;
@@ -170,6 +191,7 @@ h2 {
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 5px;
+    margin: 1em;
 }
 
 .squarecaption {
@@ -230,7 +252,6 @@ h2 {
 .oneInfo {
     display: flex;
     flex-direction: column;
-    gap: 0.3em;
     justify-content: space-around;
     align-items: center;
 }
@@ -239,6 +260,7 @@ h2 {
     font-weight: 700;
     font-size: 1.3em;
     color: navy;
+    margin-bottom: 0.3em;
 }
 
 .infoLabel {
@@ -311,13 +333,11 @@ label {
     margin-bottom: 0;
     box-sizing: content-box;
     min-height: 85vh;
-
 }
 
 .frame2col {
     display: flex;
     justify-content: center;
-    gap: 3em;
     margin: 3em auto;
 }
 
@@ -342,11 +362,12 @@ footer {
 
 #caroussel  {
     width: 50%;
-    margin: 0;
+    margin-right: 3em;
 }
 
 #caroussel img {
     width: 100%;
+    object-fit: contain;
 }
 
 .relativeP {
@@ -364,7 +385,6 @@ footer {
 .thumbnail {
     width: 100%;
     display: flex;
-    gap: 0.2em;
     margin-top: 0.2em;
 }
 
@@ -380,6 +400,7 @@ footer {
 
 .tpic {
     filter: grayscale(80%);
+    margin: 0.1em;
 }
 
 .tpic:hover{
@@ -495,19 +516,15 @@ footer {
     .mainInfos {
         width: 80%;
     }
-    .square-mosaic {
-        gap: 1.5em;
-    }
     .square-space {
         width: 22%;
         padding-bottom: 22%;
+        margin: 1em;
     }
     .planmap {
         position: relative;
         width: 80%;
-    }
-    .planzone {
-        gap: 0;
+        margin-right: 0;
     }
     #descriptionBox {
         width: 40%;
@@ -520,8 +537,8 @@ footer {
     #diapo {
         width: 85% !important;
     }  
-    .frame2col {
-        gap: 1.5em;
+    #caroussel  {
+        margin-right: 1em;
     }
 }
 
@@ -530,7 +547,6 @@ footer {
         width: 80% !important;
     }  
     .frame2col {
-        gap: 3em;
         flex-direction: column;
     }   
     .descblock {
@@ -539,6 +555,8 @@ footer {
     }
     #caroussel  {
         width: 100%;
+        margin-right: 0;
+        margin-bottom: 2em;
     }
     .carousel-caption {
         transform: translateY(-50%);
@@ -559,7 +577,6 @@ footer {
 @media (max-width: 800px) {
     .carousel-caption {
         padding: 1em 2em;
-
     }
     #plantext {
         margin-bottom: 0;
@@ -568,12 +585,11 @@ footer {
         width: 100%;
         font-size: 0.8em;
     }
-    .square-mosaic {
-        gap: 1.2em;
-    }
     .square-space {
         width: 33%;
         padding-bottom: 33%;
+        margin: 1em;
+        font-size: 0.8em;
     }
     .logo-slider {
         animation: scroll-logos 10s linear infinite;
