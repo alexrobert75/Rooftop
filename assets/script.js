@@ -1,20 +1,20 @@
 const areasText = {
-    Studio: {title: "The Studio <span class=subtitle>75m²</span>", desc: "Former photo studio of a renowned photographer, white, sober, with polished concrete floor, the studio allows many configurations", link: "studio"},
-    Backstage1: {title: "The Backstages <span class=subtitle>77m²</span>", desc: "From makeup room, to a VIP space, via a fullsize production office", link: "backstages"},
-    Salon: {title: "The Loft <span class=subtitle>135m²</span>", desc: "A huge open modular place, filled with designers' objects and possibilities", link: "loft"},
-    Backstage2: {title: "The Backstages <span class=subtitle>77m²</span>", desc: "From makeup room, to a VIP space, via a fullsize production office", link: "backstages"},
-    Terrasse: {title: "Rooftop/ Terrasse <span class=subtitle>470m²</span>", desc: "A 230m² completes a 240m² terrasse, giving a unique haven of peace, an oasis impossible to find elsewhere", link: "rooftop"},
-    Rooftop: {title: "Rooftop/ Terrasse <span class=subtitle>470m²</span>", desc: "A 230m² completes a 240m² terrasse, giving a unique haven of peace, an oasis impossible to find elsewhere", link: "rooftop"},
+    Studio: {title: "The Studio <span class=subtitle>75m²</span>", desc: " With day light or black curtains, the studio allows many configurations", link: "studio"},
+    Backstage1: {title: "The Backstages <span class=subtitle>85m²</span>", desc: "From makeup room, to a full size production office", link: "backstages"},
+    Loft: {title: "The Loft <span class=subtitle>135m²</span>", desc: "A huge open modular place, filled with designers' objects and possibilities", link: "loft"},
+    Backstage2: {title: "VIP area <span class=subtitle>25m²</span>", desc: "A private space (with shower room) for special guests", link: "backstages2"},
+    Terrasse: {title: "Terrace <span class=subtitle>240m²</span>", desc: "A unique haven of peace, an impossible oasis to find elsewhere", link: "terrasse"},
+    Rooftop: {title: "Rooftop<span class=subtitle>230m²</span>", desc: "Only the sky is the limit to your imagination ", link: "rooftop"},
 };
 
 const areaImage = {
     Studio: "studio",
     Backstage1: "backstage",
-    Salon: "salon",
-    Backstage2: "backstage",
+    Loft: "Loft",
+    Backstage2: "backstages2",
     Terrasse: "terrasse",
-    Rooftop: "terrasse",
-    none: "loft",
+    Rooftop: "rooftop",
+    none: "main",
 };
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -27,13 +27,13 @@ document.addEventListener('DOMContentLoaded', function() {
             var areaTitle = this.getAttribute('title');
             image.src = `assets/img/place/rooftopplan_${areaTitle}.png`; // Change to highlighted image
 
-            var descriptionButton = document.getElementById('littleButton');
+            // var descriptionButton = document.getElementById('littleButton');
             var descriptionTitle = document.getElementById('littleTitle');
             var descriptionText = document.getElementById('littleDescription');
             descriptionTitle.innerHTML = areasText[areaTitle]['title'] || areasText['none']['title'];
             descriptionText.innerHTML = areasText[areaTitle]['desc'] || areasText['none']['desc'];
-            descriptionButton.style.display = "inline-block";
-            descriptionButton.href = `./${areasText[areaTitle]['link']}.html`;
+            // descriptionButton.style.display = "inline-block";
+            // descriptionButton.href = `./${areasText[areaTitle]['link']}.html`;
             descriptionBox.style.backgroundImage  = `url('assets/img/places-thumbnails/${areaImage[areaTitle]}.jpg')`;
 
         });
