@@ -16,16 +16,16 @@ var changeDisplay = function(bigPic, miniPic) {
 };
 
 window.onload = function() {
-    console.log('okok');
+    // Set default display on load for carousel
+    changeDisplay(bigPics[0], miniPics[0]);
+    const mainSection = document.querySelector('main');
+    mainSection.style.opacity = '1';  
     var loader = document.getElementById('loader');
     loader.style.opacity = '0';
     setTimeout(function() {
         loader.style.display = 'none';
         loader.style.zIndex = -1;
     }, 300); // same duration as the CSS transition
-
-    // Set default display on load for carousel
-    changeDisplay(bigPics[0], miniPics[0]);
 };
 
 

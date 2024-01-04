@@ -1,5 +1,7 @@
 window.onload = function() {
     var loader = document.getElementById('loader');
+    const mainSection = document.querySelector('main');
+    mainSection.style.opacity = '1';  
     loader.style.opacity = '0';
     setTimeout(function() {
         loader.style.display = 'none';
