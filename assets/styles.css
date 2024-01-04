@@ -1,0 +1,734 @@
+/* General styling */
+
+html {
+    scroll-behavior: smooth;
+}
+
+.btn-light {
+    border: 1px solid black;
+    font-weight: 100;
+}
+
+section {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding-top: 7em;
+    margin-top: -7em;
+    margin-bottom: 8em;
+}
+
+.spacer {
+    margin-top: 6em;
+}
+
+.rightside {
+    align-self: flex-end !important; 
+}
+
+h2 {
+    font-size: 1.8em;
+    font-weight: 700;
+    margin-right: auto;
+    display: inline-block;
+}
+
+.subtitle {
+    color: gray;
+    font-style: italic;
+    opacity: 0.5;
+    font-weight: 200;
+    margin-left: 0.2em;
+}
+
+.centered-text {
+    text-align: center;
+    margin-top: 3em;
+    width: 50%;
+}
+
+footer {
+    background-color: lightgray;
+    text-align: center;
+    padding: 0.5em 0;
+    color: white;
+    font-weight: 100;
+    margin-top: 3em;
+}
+
+/* Loader */
+
+#loader {
+    transition: opacity 0.3s ease-in-out;
+}
+
+#loader.hide {
+    display: none;
+    opacity: 0;
+}
+
+/* Scrollbar */
+
+::-webkit-scrollbar {
+    width: 16px;
+}
+  
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+  
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+
+
+/* Navbar */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+    opacity: 0.9;
+}
+
+.navbar-brand img {
+    height: 2em;
+}
+
+/* Hero banner */
+
+.carousel {
+    height: 100vh;
+    position: relative;
+    box-sizing: border-box;
+}
+
+.carousel-inner {
+    height: 100vh;
+    z-index: 1;  
+}
+
+.carousel-item {
+    height: 100%; 
+}
+
+.carousel-item img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.carousel-caption {
+    z-index: 10;
+    background-color: rgba(255, 255, 255, 0.8);
+    width: fit-content;
+    margin: 0 auto;
+    height: fit-content !important;
+    top: 50%;
+    padding: 1em 5em;
+    color: black;
+    font-size: 0.9em;
+    
+}
+
+.carousel-caption h1 {
+    text-transform: uppercase;
+    font-size: 2em;
+}
+
+/* white flash fix for banner */
+
+.carousel-inner .carousel-item {
+    opacity: 0;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: block;
+    position: absolute;
+  }
+  .carousel-inner .carousel-item:first-of-type {
+    position: relative;
+  }
+  .carousel-inner .active {
+    opacity: 1;
+}
+
+/* Plan section */
+
+.planzone {
+    width: 100%;
+    display: flex;
+    margin: 1em;
+}
+
+.planmap {
+    position: relative;
+    width: 60%;
+    margin-right: 1em;
+}
+
+#apartmentPlan {
+    width: 100%;
+    height: auto;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#apartmentPlan.fade-image {
+    opacity: 0.5;
+}
+
+
+#descriptionBox {
+    border-radius: 5px;
+    width: 40%;
+    margin: 1em;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    overflow: visible;
+    font-size: 0.8em;
+}
+
+#descriptionText {
+    width: 70%;
+    background-color: white;
+    min-height: 2em;
+    padding: 1.5em;
+    border: 1px solid lightgray;
+    transform: translateX(30%);
+    font-size: 0.9em;
+    align-self: flex-end;
+    margin-bottom: 2em;
+}
+
+#littleTitle {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+#littleDescription {
+    color: gray;
+    font-size: 1em;
+}
+
+#littleButton {
+    font-size: 0.9em;
+}
+
+/* Image mosaic */
+
+.square-mosaic {
+    display: flex;
+    width: 100%;
+    margin-top: 2em;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.square-space {
+    position: relative;
+    width: 16%;
+    padding-bottom: 16%;
+    box-sizing: border-box;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    margin: 1em;
+}
+.square-space.bigsquare {
+    width: 25% !important;
+}
+
+.squarecaption {
+    color: black !important;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    background-color: rgba(255, 255, 255, 0.75);
+    width: 110%;
+    height: 105%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 300;
+    opacity: 0;
+    transition: opacity 0.3s;
+    cursor: pointer;
+    text-align: center;
+    padding: 1em;
+    font-size: 0.9em;
+}
+
+.squarecaption:hover {
+    opacity: 1;
+    transition: opacity 0.3s;
+}
+
+#photostudiosquare {
+    background-image: url('./img/places-thumbnails/studio.jpg');
+}
+
+#loftsquare {
+    background-image: url('./img/places-thumbnails/Loft.jpg');
+}
+
+#backstagesquare {
+    background-image: url('./img/places-thumbnails/backstage.jpg');
+}
+
+#rooftopsquare {
+    background-image: url('./img/rooftop/1.jpg');
+}
+
+#vipsquare {
+    background-image: url('./img/backstages2/1.jpg');
+}
+
+#terrassesquare {
+    background-image: url('./img/terrasse/1.jpg');
+}
+
+#tvsetsquare {
+    background-image: url('./img/events/thumbnails/tv.jpg');
+}
+
+#fashionsquare {
+    background-image: url('./img/events/thumbnails/photoshoot.jpg');
+}
+
+#corpo1square {
+    background-image: url('./img/events/thumbnails/corpo.jpg');
+}
+
+#popupsquare {
+    background-image: url('./img/events/thumbnails/tv.jpg');
+}
+
+#corpo2square {
+    background-image: url('./img/events/thumbnails/pevent.jpg');
+}
+
+/* Key info section */
+
+.mainInfos {
+    width: 65%;
+    box-shadow: 5px 5px 12px 0px rgba(104,101,105,0.82);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0.5em;
+    border-radius: 5px;
+    margin-top: 4em;
+    text-align: center;
+}
+
+.oneInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.numberInfo {
+    font-weight: 700;
+    font-size: 1.3em;
+    color: navy;
+    margin-bottom: 0.3em;
+}
+
+.infoLabel {
+    font-size: 0.9em;
+    color: darkslategray;
+}
+
+/* Client section */
+
+.logo-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 3em 0 0 0;
+}
+
+.logo-slider {
+    display: flex;
+    animation: scroll-logos 30s linear infinite;
+}
+
+.logo-slider img {
+    height: 2em;
+    margin: 1.3em;
+}
+
+@keyframes scroll-logos {
+    0% {
+        transform: translateX(0%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Contact section */
+
+form {
+    width: 60%;
+    margin-top: 3em;
+    margin-right: 2.5em;
+}
+
+input, select, textarea {
+    margin-bottom: 1em;
+}
+
+select {
+    width: 100%;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    height: 2em;
+}
+
+label {
+    margin-bottom: 0.2em;
+}
+
+.contactmap {
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+
+.placemap {
+    width: 40%;
+}
+
+.placemap p {
+    font-size: 0.8em;
+    border: 1px solid lightgray;
+    padding: 0.5em;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* Space pages */
+
+#diapo {
+    margin-top: 6em;
+    padding: 0;
+    margin-bottom: 0;
+    box-sizing: content-box;
+    min-height: 85vh;
+    width: 80%;
+}
+
+.frame2col {
+    display: flex;
+    justify-content: center;
+    margin: 0.5em auto;
+}
+
+.h2diapo {
+    margin-bottom: 1em;
+}
+
+.descblock {
+    width: 30%;
+    text-align: justify;
+    font-size: 0.9em;
+}
+
+/* Caroussel d'images */
+
+#caroussel  {
+    width: 70%;
+    margin-right: 3em;
+}
+
+#caroussel img {
+    width: 100%;
+    object-fit: cover;
+    max-height: 60vh;
+}
+
+.relativeP {
+    position: relative;
+    width: 100%;
+    box-sizing: border-box;
+    height: fit-content;
+}
+
+.mainpic {
+    width: 100%;
+    position: relative;
+}
+
+.thumbnail {
+    width: 100%;
+    display: flex;
+    margin-top: 0.2em;
+}
+
+.bigpic {
+    display: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.showimg {
+    display: flex;
+}
+
+.tpic {
+    filter: grayscale(80%);
+    margin: 0.1em;
+    cursor: pointer;
+}
+
+.tpic:hover{
+    filter: none;
+}
+
+.clear{
+    filter:none;
+}
+
+.fleche {
+    font-style: normal !important;
+    text-decoration: none !important;
+    color: white;
+    font-size: 2rem;
+    padding: 0.5rem; 
+    position: absolute;
+    top: 30%;
+    cursor: pointer;
+    width: auto;
+    font-weight: bold; 
+    z-index: 10;
+    text-align: center;
+}
+
+.bigfleche {
+    font-size: 4rem;
+    top: 40%;
+    width: 4.2rem;
+    z-index: 999999999999999;
+}
+
+#prev {
+    left: 0;
+    border-radius: 0 10px 10px 0;
+}
+
+#next {
+    right: 0;
+    border-radius: 10px 0 0 10px;
+}
+
+#prev:hover,#next:hover{
+    background-color: rgba(0,0,0,0.5);
+    transition: background-color 0.3s;
+    color: white;
+}
+
+/* Image plein écran */
+
+.modal {
+    display: flex;
+    position: fixed;
+    z-index: 100000000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal .bigpic {
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    max-width: 80%;
+}
+
+.modal .bigpic img {
+    object-fit: contain;
+    max-height: 90vh !important;
+    animation: fade 0.3s;
+    -webkit-animation: fade 0.3s;
+    width: auto;
+    max-width: 100%;
+}
+  
+.close {
+    display: none;
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+  
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* Responsive */
+
+@media (max-width: 1200px) {
+    .contactmap {
+        flex-direction: column;
+        align-items: center;
+    }
+    .placemap {
+        width: 100%;
+    }
+    form {
+        margin-right: 0;
+        width: 100%;
+        margin-bottom: 3em;
+    }
+    iframe {
+        height: 20em;
+    }
+    .centered-text {
+        width: 80%;
+    }
+    .mainInfos {
+        width: 80%;
+    }
+    .square-space {
+        width: 22%;
+        padding-bottom: 22%;
+        margin: 1em;
+    }
+    .square-space.bigsquare {
+        width: 33% !important;
+    }
+    .planmap {
+        position: relative;
+        width: 80%;
+        margin-right: 0;
+    }
+    #descriptionBox {
+        width: 40%;
+        font-size: 0.8em;
+        flex-wrap: wrap;
+    }
+    #descriptionText {
+        background-color: rgba(255, 255, 255, 0.9);
+        margin-bottom: 1em;
+    }
+    #diapo {
+        width: 85% !important;
+    }  
+    #caroussel  {
+        margin-right: 1em;
+    }
+}
+
+@media (min-width: 992px) {
+    .navbar-nav {
+        flex-grow: 1;
+        justify-content: center;
+    }
+    .navbar-brand {
+        position: absolute;
+    }
+}
+
+@media ((max-width: 900px) or (max-aspect-ratio: 4/3)) {
+    #diapo {
+        width: 80% !important;
+    }  
+    .frame2col {
+        flex-direction: column;
+    }   
+    .descblock {
+        width: 100%;
+        margin-bottom: 3em;
+    }
+    #caroussel  {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 2em;
+    }
+    .carousel-caption {
+        transform: translateY(-50%);
+
+    }
+    .planzone {
+        display: none;
+    }
+}
+
+@media (max-width: 800px) {
+    .carousel-caption {
+        padding: 1em 2em;
+    }
+    #plantext {
+        margin-bottom: 0;
+    }
+    .mainInfos {
+        width: 100%;
+        font-size: 0.8em;
+    }
+    .square-space {
+        width: 33%;
+        padding-bottom: 33%;
+        margin: 1em;
+        font-size: 0.8em;
+    }
+    .square-space.bigsquare {
+        width: 44% !important;
+    }
+    .logo-slider {
+        animation: scroll-logos 10s linear infinite;
+    }
+}
+
+@media (max-width: 750px) {
+    .carousel-caption {
+        padding: 1em 2em;
+    }
+    form {
+        width: 90%;
+    }
+    
+}
+
+@media (max-width: 580px) {
+    .square-space {
+        width: 33%;
+        padding-bottom: 33%;
+        margin: 0.5em;
+    }
+    .square-space.bigsquare {
+        width: 70% !important;
+    } 
+}
+
+
+
+
