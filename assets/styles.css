@@ -316,7 +316,7 @@ footer {
 }
 
 #popupsquare {
-    background-image: url('./img/events/thumbnails/tv.jpg');
+    background-image: url('./img/events/thumbnails/video.jpg');
 }
 
 #corpo2square {
@@ -368,7 +368,7 @@ footer {
 
 .logo-slider {
     display: flex;
-    animation: scroll-logos 30s linear infinite;
+    animation: scroll-logos 50s linear infinite;
 }
 
 .logo-slider img {
@@ -429,12 +429,12 @@ label {
 /* Space pages */
 
 #diapo {
-    margin-top: 6em;
+    margin-top: 5em;
     padding: 0;
     margin-bottom: 0;
     box-sizing: content-box;
     min-height: 85vh;
-    width: 80%;
+    width: 85%;
 }
 
 .frame2col {
@@ -448,7 +448,7 @@ label {
 }
 
 .descblock {
-    width: 30%;
+    width: 25%;
     text-align: justify;
     font-size: 0.9em;
 }
@@ -456,14 +456,14 @@ label {
 /* Caroussel d'images */
 
 #caroussel  {
-    width: 70%;
-    margin-right: 3em;
+    width: 75%;
+    margin-right: 2em;
 }
 
 #caroussel img {
     width: 100%;
     object-fit: cover;
-    max-height: 60vh;
+    max-height: 68vh;
 }
 
 .relativeP {
@@ -482,6 +482,13 @@ label {
     width: 100%;
     display: flex;
     margin-top: 0.2em;
+    max-height: 12vh;
+
+}
+
+.thumbnail img {
+    height: 100% !important;
+    object-fit: cover;
 }
 
 .bigpic {
