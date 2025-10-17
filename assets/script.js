@@ -10,12 +10,12 @@ window.onload = function() {
 };
 
 const areasText = {
-    Studio: {title: "The Studio <span class=subtitle>75m²</span>", desc: " With day light or black curtains, the studio allows many configurations", link: "studio"},
-    Backstage1: {title: "The Backstages <span class=subtitle>85m²</span>", desc: "From makeup room, to a full size production office", link: "backstages"},
-    Loft: {title: "The Loft <span class=subtitle>135m²</span>", desc: "A huge open modular place, filled with designers' objects and possibilities", link: "loft"},
-    Backstage2: {title: "VIP area <span class=subtitle>25m²</span>", desc: "A private space (with shower room) for special guests", link: "backstages2"},
-    Terrasse: {title: "Terrace <span class=subtitle>240m²</span>", desc: "A unique haven of peace, an impossible oasis to find elsewhere", link: "terrasse"},
-    Rooftop: {title: "Rooftop<span class=subtitle>230m²</span>", desc: "Only the sky is the limit to your imagination ", link: "rooftop"},
+    Studio: { title: "Le studio <span class=subtitle>75m²</span>", desc: " En lumière du jour, zénithale ou avec rideaux noirs, le studio permet de nombreuses configurations", link: "studio" },
+    Backstage1: { title: "Backstage <span class=subtitle>85m²</span>", desc: "Loges maquillage et bureau de production", link: "backstages" },
+    Loft: { title: "Le Loft <span class=subtitle>135m²</span>", desc: "Open space permettant une modularité totale, décoration soignée, moderne et chaleureuse", link: "loft" },
+    Backstage2: { title: "VIP area <span class=subtitle>25m²</span>", desc: "Un espace privé avec salle d’eau en suite pour les 'special guests'", link: "backstages2" },
+    Terrasse: { title: "Terrace <span class=subtitle>240m²</span>", desc: "Un havre de paix exceptionnel , oasis inattendue en milieu urbain, en retrait de la rue", link: "terrasse" },
+    Rooftop: { title: "Rooftop<span class=subtitle>230m²</span>", desc: "360 ° Plein ciel .. pour une imagination sans limites", link: "rooftop" },
 };
 
 const areaImage = {
